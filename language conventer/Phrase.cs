@@ -9,6 +9,11 @@ namespace language_conventer
     public class Phrase
     {
         public string English { get; set; }
-        public string Translated { get; set; }
+        public Dictionary<string, string> Translations { get; set; }
+
+        public Phrase()
+        {
+            Translations = new Dictionary<string, string>();
+        }
     }
 }
