@@ -5,9 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:language_conventer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Language Converter" Height="450" Width="800">
     <Grid>
-        <ListBox ItemsSource="{Binding Phrases}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <ComboBox x:Name="LanguageComboBox" 
+                      ItemsSource="{Binding Languages}" 
+                      Width="200" Margin="0,0,10,0"/>
+            <Button Content="Translate" Click="TranslateButton_Click"/>
+        </StackPanel>
+
+        <ListBox x:Name="PhrasesListBox" 
+                 ItemsSource="{Binding Phrases}" 
+                 Grid.Row="1" Margin="10">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
