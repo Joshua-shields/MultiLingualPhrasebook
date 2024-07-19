@@ -1,5 +1,4 @@
-# language conventer
-Multi-Language Phrase Translator
+# Multi-Language Phrase Translator
 A WPF app that translates common English phrases into 14 languages without an API.
 
 ![Screenshot 2024-07-19 at 12 36 23](https://github.com/user-attachments/assets/fd9d7130-1064-477d-b240-d66d554f0747)
