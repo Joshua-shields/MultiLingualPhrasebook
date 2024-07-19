@@ -104,6 +104,7 @@ namespace language_conventer
                         {"Turkish", "Teşekkür ederim"}, {"Italian", "Grazie"}
                     }
                 }
+
             };
         }
 
