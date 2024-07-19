@@ -103,7 +103,33 @@ namespace language_conventer
                         {"German", "Danke"}, {"Urdu", "شکریہ"}, {"Korean", "감사합니다"},
                         {"Turkish", "Teşekkür ederim"}, {"Italian", "Grazie"}
                     }
+                },
+                new Phrase
+                {
+                    English = "How is it going",
+                    Translations = new Dictionary<string, string>
+                    {
+                        {"Mandarin Chinese", "最近怎么样？"},{"Spanish", "¿Cómo va todo?"},{"Hindi", "कैसा चल रहा है?"},
+                        {"Arabic", "كيف حالك؟"},{"Bengali", "কেমন চলছে?"},{"Portuguese", "Como estão as coisas?"},
+                        {"Russian", "Как дела?"},{"Japanese", "調子はどうですか？"},{"French", "Comment ça va ?"},
+                        {"German", "Wie geht's?"},{"Urdu", "کیسے ہے؟"},{"Korean", "어떻게 지내세요?"},{"Turkish", "Nasılsın?"},
+                        {"Italian", "Come va?"}
+                    }
+                },
+                new Phrase
+                {
+                    English = "Good morning",
+                    Translations = new Dictionary<string, string>
+                    {
+                        {"Mandarin Chinese", "早上好"},{"Spanish", "Buenos días"},{"Hindi", "सुप्रभात"},
+                        {"Arabic", "صباح الخير"},{"Bengali", "সুপ্রভাত"},{"Portuguese", "Bom dia"},
+                        {"Russian", "Доброе утро"}, {"Japanese", "おはようございます"},{"French", "Bonjour"},
+                        {"German", "Guten Morgen"},{"Urdu", "صبح بخیر"},{"Korean", "좋은 아침"},{"Turkish", "Günaydın"},
+                        {"Italian", "Buongiorno"}
+                    }
+
                 }
+
 
             };
         }
