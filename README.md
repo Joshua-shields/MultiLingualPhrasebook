@@ -9,6 +9,7 @@ Language Converter is a WPF application that allows users to translate common ph
 - Translate phrases from English to 14 different languages
 - Display pronunciation guides for translated phrases
 - User-friendly interface with a modern design
+- *Need to sill add the pronunciation feature 
 
 ## Languages Supported
 - Mandarin Chinese
