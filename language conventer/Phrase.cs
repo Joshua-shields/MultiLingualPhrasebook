@@ -10,10 +10,12 @@ namespace language_conventer
     {
         public string English { get; set; }
         public Dictionary<string, string> Translations { get; set; }
+        public Dictionary<string, string> Pronunciations { get; set; }
 
         public Phrase()
         {
             Translations = new Dictionary<string, string>();
+            Pronunciations = new Dictionary<string, string>();
         }
     }
 }

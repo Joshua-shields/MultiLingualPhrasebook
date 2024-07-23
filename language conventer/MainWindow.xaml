@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:language_conventer"
         mc:Ignorable="d"
         Title="Language Converter" Height="600" Width="800"
-        Background="#F0F0F0">
+        Background="#E0F0FF">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -14,14 +14,16 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="English" FontSize="24" FontWeight="Bold" Margin="0 0 0 10"/>
+        <TextBlock Text="Language Converter" FontSize="28" FontWeight="Bold" Margin="0 0 0 20" Foreground="#2C3E50"/>
 
-        <ListBox Grid.Row="1" 
-                 ItemsSource="{Binding Languages}" 
+        <ListBox Grid.Row="1"
+                 ItemsSource="{Binding Languages}"
                  SelectedItem="{Binding SelectedLanguage, Mode=TwoWay}"
-                 Height="100" Margin="0 0 0 10">
+                 Height="100" Margin="0 0 0 20"
+                 Background="#FFFFFF" BorderBrush="#3498DB">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel />
@@ -29,11 +31,12 @@
             </ListBox.ItemsPanel>
         </ListBox>
 
-        <ListBox Grid.Row="2" 
+        <ListBox Grid.Row="2"
                  x:Name="PhrasesListBox"
-                 ItemsSource="{Binding Phrases}" 
+                 ItemsSource="{Binding Phrases}"
                  SelectedItem="{Binding SelectedPhrase, Mode=TwoWay}"
-                 Margin="0 0 0 10">
+                 Margin="0 0 0 20"
+                 Background="#FFFFFF" BorderBrush="#3498DB">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding English}" />
@@ -41,20 +44,42 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <Button Grid.Row="3" 
-                Content="Translate" 
+        <Button Grid.Row="3"
+                Content="Translate"
                 Click="TranslateButton_Click"
-                Width="100" Height="30" 
-                Margin="0 0 0 10"/>
+                Width="120" Height="40"
+                Margin="0 0 0 20"
+                Background="#3498DB"
+                Foreground="White"
+                FontSize="16"/>
 
-        <Border Grid.Row="4" 
-                Background="White" 
-                BorderBrush="Gray" 
-                BorderThickness="1" 
+        <Border Grid.Row="4"
+                Background="White"
+                BorderBrush="#3498DB"
+                BorderThickness="2"
+                CornerRadius="5"
+                Padding="10"
+                Margin="0 0 0 20">
+            <StackPanel>
+                <TextBlock Text="Translation:" FontWeight="Bold" Margin="0 0 0 5"/>
+                <TextBlock x:Name="TranslationTextBlock"
+                           Text="{Binding TranslatedText}"
+                           TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="5"
+                Background="White"
+                BorderBrush="#3498DB"
+                BorderThickness="2"
+                CornerRadius="5"
                 Padding="10">
-            <TextBlock x:Name="TranslationTextBlock" 
-                       Text="{Binding TranslatedText}" 
-                       TextWrapping="Wrap"/>
+            <StackPanel>
+                <TextBlock Text="Pronunciation:" FontWeight="Bold" Margin="0 0 0 5"/>
+                <TextBlock x:Name="PronunciationTextBlock"
+                           Text="{Binding PronunciationText}"
+                           TextWrapping="Wrap"/>
+            </StackPanel>
         </Border>
     </Grid>
 </Window>
